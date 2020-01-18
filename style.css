@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Dancing Script', cursive;
+}
+
+.panels {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.panel {
+    background-position: center;
+    width: 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: 0.7s cubic-bezier(0.78,-0.37, 0.34, 1.26);
+}
+
+.panel1 {
+    background-image: url('img/landscape.jpg');
+}
+
+.panel2 {
+    background-image: url('img/dolomity.jpg');
+}
+
+.panel3 {
+    background-image: url('img/animal.jpg');
+}
+
+.panel4 {
+    background-image: url('img/mountains.jpg');
+}
+
+.panel5 {
+    background-image: url('img/nature.jpg');
+}
+
+.panel :first-child {
+    transform: translateY(-250%);
+    transition: 0.5s linear;
+}
+
+.panel :last-child {
+    transform: translateY(250%);
+    transition: 0.5s linear;
+}
+
+.panel.active :first-child {
+    transform: translateY(0%);
+}
+
+.panel.active :last-child {
+    transform: translateY(0%);
+}
+
+.panel.open {
+    width: 40%;
+}
+
+.panel.fullScreen {
+    width: 100%;
+    background-position: center;
+}
+
+.panel.none {
+    width: 0%;
+}
